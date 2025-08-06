@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator - Math Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/calculator.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">← Back to Math Hub</a>
+                <h1>Advanced Calculator</h1>
+                <a href="battle-arena.html" class="nav-link">Math Battle Arena →</a>
+            </nav>
+        </header>
+        
+        <main class="calculator-main">
+            <div class="calculator-container">
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="expression">Enter Mathematical Expression:</label>
+                        <input type="text" id="expression" placeholder="e.g., 2x + 3 = 7, sin(30), derivative of x^2, integral of 2x" class="expression-input">
+                        <div class="input-buttons">
+                            <button id="calculate-btn" class="btn btn-primary">Calculate</button>
+                            <button id="clear-btn" class="btn btn-outline">Clear</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-functions">
+                        <h3>Quick Functions</h3>
+                        <div class="function-buttons">
+                            <button class="function-btn" data-func="sin(">sin</button>
+                            <button class="function-btn" data-func="cos(">cos</button>
+                            <button class="function-btn" data-func="tan(">tan</button>
+                            <button class="function-btn" data-func="log(">log</button>
+                            <button class="function-btn" data-func="sqrt(">√</button>
+                            <button class="function-btn" data-func="^">^</button>
+                            <button class="function-btn" data-func="π">π</button>
+                            <button class="function-btn" data-func="e">e</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-section">
+                    <div class="result-display">
+                        <h3>Result</h3>
+                        <div id="result-output" class="output-box">
+                            <p class="placeholder">Enter an expression and click Calculate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation-display">
+                        <h3>Step-by-Step Explanation</h3>
+                        <div id="explanation-output" class="output-box">
+                            <p class="placeholder">Detailed explanations will appear here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="history-section">
+                    <h3>Calculation History</h3>
+                    <div id="history-list" class="history-container">
+                        <p class="placeholder">Your calculation history will appear here</p>
+                    </div>
+                    <button id="clear-history" class="btn btn-outline small">Clear History</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="scripts/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Battle Arena - Math Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/battle-arena.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">← Back to Math Hub</a>
+                <h1>Math Battle Arena</h1>
+                <a href="calculator.html" class="nav-link">Advanced Calculator →</a>
+            </nav>
+        </header>
+        
+        <main class="arena-main">
+            <div class="controls-panel">
+                <h2>Battle Configuration</h2>
+                <div class="control-group">
+                    <div class="select-group">
+                        <label for="class-select">Select Class Level:</label>
+                        <select id="class-select" class="control-select">
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                            <option value="Class 12">Class 12</option>
+                            <option value="Engineering Mathematics 1">Engineering Mathematics 1</option>
+                            <option value="Engineering Mathematics 2">Engineering Mathematics 2</option>
+                            <option value="Advanced Engineering Mathematics">Advanced Engineering Mathematics</option>
+                        </select>
+                    </div>
+                    
+                    <div class="select-group">
+                        <label for="chapter-select">Select Chapter:</label>
+                        <select id="chapter-select" class="control-select"></select>
+                    </div>
+                    
+                    <div class="select-group">
+                        <label for="difficulty-select">Select Difficulty:</label>
+                        <select id="difficulty-select" class="control-select">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    
+                    <button id="get-question-btn" class="btn btn-primary">Generate Question</button>
+                </div>
+            </div>
+            
+            <div class="battle-area">
+                <div class="question-panel">
+                    <h2>Current Challenge</h2>
+                    <div class="question-display">
+                        <p id="question-text">Configure your battle settings and click "Generate Question" to begin!</p>
+                    </div>
+                    
+                    <form id="answer-form" class="answer-section">
+                        <div class="answer-input-group">
+                            <input type="text" id="user-answer" placeholder="Enter your answer..." class="answer-input">
+                            <button type="submit" class="btn btn-success">Submit Answer</button>
+                        </div>
+                    </form>
+                    
+                    <div id="result-message" class="result-message"></div>
+                    
+                    <div class="question-timer">
+                        <span>Time: </span>
+                        <span id="timer-display">00:00</span>
+                    </div>
+                </div>
+                
+                <div class="performance-panel">
+                    <h2>Battle Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="total-score">0</div>
+                            <div class="stat-label">Total Score</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="current-streak">0</div>
+                            <div class="stat-label">Current Streak</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="accuracy-rate">0%</div>
+                            <div class="stat-label">Accuracy Rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="questions-answered">0</div>
+                            <div class="stat-label">Questions Answered</div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <h3>Recent Achievements</h3>
+                        <div id="achievements-list" class="achievements-container">
+                            <p class="placeholder">Complete challenges to unlock achievements!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="leaderboard-section">
+                <h2>Personal Best Records</h2>
+                <div id="leaderboard-content" class="leaderboard-content">
+                    <p class="placeholder">Your best performances will be displayed here</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="scripts/battle-arena.js"></script>
+</body>
+</html>
